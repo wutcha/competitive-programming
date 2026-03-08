@@ -9,25 +9,29 @@ int main() {
     cin.tie(0);
 
     int n,q; cin >> n>>q;
-    vector<int> v(n);
+    vector<pair<int,int>> v(n);
     for(int i = 0; i < n; i++) {
-        cin>>v[i];
+        cin>>v[i].first;
+        v[i].second = i;
     }
+    sort(v.begin(),v.end());
     while(q--){
         int b; cin>>b;
-        vector<int> rem;
-        int m = INT_MAX;
-        while(b--) {
-            int c; cin>>c;
-            m = min(m,v[c-1]);
-            rem[b-1]=c-1;
+        set<int> s;
+        while(b--){
+            int cur; cin>>cur;
+            cur--;
+            s.insert(cur);
         }
-        for(auto i: rem){
-            int pb = v[i];
-            v.erase(v.begin()+i);
-            v.push_back(pb);
+        //for(auto i: s) cout << i << " ";
+        //cout<<"eee"<<nl;
+        for(auto i: v){
+            //cout << i.first << " " << i.second << nl;
+            if(s.find(i.second)==s.end()){
+                cout << i.first << nl;
+                break;
+            }
         }
-        cout<<m<<nl;
     }
 
     return 0;
