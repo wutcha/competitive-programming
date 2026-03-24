@@ -8,13 +8,10 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
 
-    ll n; cin>>n;
-
-    ll sum = 0;
-    for(ll i = 5; i<=min(n,(ll)1e9); i*=5){
-        sum+=n/i;
+    int t = 1; cin >> t;
+    while(t--){
+        
     }
-    
-    cout<<sum;
+
     return 0;
 }
