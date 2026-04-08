@@ -10,7 +10,16 @@ int main() {
 
     int t = 1; cin >> t;
     while(t--){
-        
+        int n; cin>>n;
+        int lo = 1;
+        int hi = 3*n;
+        while(lo < hi){
+            cout << lo << " " << hi << " " << hi-1 << " ";
+            lo++;
+            hi-=2;
+        }
+
+        cout<<nl;
     }
 
     return 0;

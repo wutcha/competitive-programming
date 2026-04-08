@@ -10,7 +10,8 @@ int main() {
 
     int t = 1; cin >> t;
     while(t--){
-        
+        int x; cin>>x;
+        cout << x << nl;
     }
 
     return 0;
