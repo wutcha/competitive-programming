@@ -9,19 +9,16 @@ int main() {
     cin.tie(0);
 
     int n; cin>>n;
-    vector<pair<pair<int,int>,int>> v;
-    vector<int> inner(n), outer(n);
-
+    vector<ll> v;
+    ll s = 0;
+    ll m = 0;
     for(int i = 0; i < n; i++){
-        int a,b; cin>>a>>b;
-        v.push_back({{a,2},i});
-        v.push_back({{b,1},i});
+        ll a; cin>>a;
+        s+=a;
+        m = max(a,m);
+        v.push_back(a);
     }
-    sort(v.begin(),v.end());
-
-    for(auto i: v){
-
-    }
+    cout << ((m>s-m)?(2*m):s);
 
     return 0;
 }
