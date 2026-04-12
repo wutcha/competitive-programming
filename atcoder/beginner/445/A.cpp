@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+using ll = long long;
+#define nl '\n'
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    
+    string s; cin>>s;
+    cout << (s[0]==s[s.length()-1] ? "Yes" : "No");
+
+    return 0;
+}
