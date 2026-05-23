@@ -10,16 +10,7 @@ int main() {
     
     int t; cin>>t;
     while (t--) {
-        string s; cin>>s;
-        int n = s.size();
-        if(n==1){
-            cout<<s<<nl;
-            continue;
-        }
-
-        int sum = 0;
-        for(auto i: s) sum+=(i-'0');
-
+        
     }
 
     return 0;

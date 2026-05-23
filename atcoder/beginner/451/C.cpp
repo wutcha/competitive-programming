@@ -9,17 +9,15 @@ int main() {
     cin.tie(0);
     
     int t; cin>>t;
+    priority_queue<int,vector<int>,greater<int>> m;
     while (t--) {
-        string s; cin>>s;
-        int n = s.size();
-        if(n==1){
-            cout<<s<<nl;
-            continue;
+        int a,b; cin>>a>>b;
+        if(a==1){
+            m.push(b);
+        }else{
+            while(!m.empty()&&m.top()<=b) m.pop();
         }
-
-        int sum = 0;
-        for(auto i: s) sum+=(i-'0');
-
+        cout<<m.size()<<nl;
     }
 
     return 0;

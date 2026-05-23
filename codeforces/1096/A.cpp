@@ -10,16 +10,9 @@ int main() {
     
     int t; cin>>t;
     while (t--) {
-        string s; cin>>s;
-        int n = s.size();
-        if(n==1){
-            cout<<s<<nl;
-            continue;
-        }
-
-        int sum = 0;
-        for(auto i: s) sum+=(i-'0');
-
+        int a, b; cin>>a>>b;
+        if(a%2==1&&b%2==1) cout<<"NO"<<nl;
+        else cout<<"YES"<<nl;
     }
 
     return 0;
