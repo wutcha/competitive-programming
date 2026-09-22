@@ -12,16 +12,26 @@ int main() {
     while(t--){
         int n; cin>>n;
         vector<ll> v(n);
-        for(auto& i: v) cin>>i;
-        
-        int lo = 1, hi = n;
-        while(lo < hi){
-            int mid = (lo+hi)/2;
-            
-
-
-
+        for(int i = 0; i < n; i++){
+            ll a; cin>>a;
+            v[i]=a-i;
         }
+        sort(v.begin(),v.end());
+        v.erase(unique(v.begin(),v.end()), v.end());
+
+        int l = 1;
+        int ml = 1;
+        //cout<<v.size()<<" vsize"<<nl;
+        for(int i = 1; i < v.size(); i++){
+            if(v[i]==v[i-1]+1){
+                l++;
+                ml = max(ml,l);
+            }else{
+                l = 1;
+            }
+        }
+        cout<<ml<<nl;
+        
     }
 
     return 0;
