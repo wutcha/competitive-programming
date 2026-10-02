@@ -10,15 +10,14 @@ int main() {
 
     int t; cin >> t;
     while(t--){
-        map<ll,ll> mp;
-        ll mx = 0;
-        int n; cin>>n;
-        for(int i = 0; i < n; i++){
-            ll a,b; cin>>a>>b;
-            mp[a]=b;
-            mx=max(mx,a);
+        ll n, k; cin>>n>>k;
+        ll num = 2;
+        ll sum = 1;
+        while((num*2)-1<=n) {
+            num*=2;
+            sum++;
         }
-        
+        cout<<((sum)*k)<<nl;
     }
 
     return 0;
